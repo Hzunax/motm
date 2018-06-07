@@ -7,11 +7,15 @@
 		<title>Meeting of the Minds</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/league.css">
-		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- CSS theme -->
+		<link rel="stylesheet" href="css/theme/black.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+		
+		<!-- Custom css -->
+		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -26,15 +30,35 @@
 		<div class="reveal">
 			<div class="slides">
 				<section data-background-color="#1e1e1e">
-					<h2>Hello world, we speak <span style="color: #a88d50">Internet</span>!</h2>
+					<h2>Hello world, we speak <span class="accentuate">Internet</span>!</h2>
+				</section>
+
+				<!--TODO put this in a grid	-->
+				<section>
+					<div class="flex-container">
+						<!--TODO get Steven's photo in higher quality -->
+						<div class="profile-container">
+							<img src="./images/Steven_Buelens_Square.jpg">
+							<p>Front-end developer @ ING</p>
+						</div>
+						<div class="profile-container">
+							<img src="./images/Stijn_Van_Asschodt_Square.jpg">
+							<p>Front-end developer @ ING</p>
+						</div>
+					</div>
 				</section>
 				<section>
-					<h2>Weuheuw, we've got freaking <span style="color: #a88d50">live</span> editable code!</h2>
-					<pre><code data-trim data-noescape contenteditable>
-						let add = function(a, b) {
-							return a + b;
-						}
+					<h2>Weuheuw, we've got freaking <span class="accentuate">live</span> editable code!</h2>
+					<pre><code data-trim contenteditable>
+						<style>
+							h2 {
+								text-decoration: none;
+							}
+						</style>
 					</code></pre>
+				</section>
+				<section>
+					<h2>What have <span class="accentuate">you</span> spent your training budget on so far?</h2>
 				</section>
 				<section data-background="https://media.giphy.com/media/AWfeFosX36RTW/giphy.gif">
 					<h2>Intermission</h2>
@@ -58,6 +82,9 @@
 				</section>
 				<section data-background="./images/Hand.jpg">
 				</section>
+				<section>
+					<iframe data-src="https://vimeo.com/273568428"></iframe>
+				</section>
 				<section data-background="https://media.giphy.com/media/d3YHLb3N5bxxo7Ha/giphy.gif">
 					<h2>Thank you!</h2>
 				</section>
@@ -74,9 +101,12 @@
 			Reveal.initialize({
 				controls: false,
 				progress: false,
+				history: true,
 				transition: 'slide',
 				transitionSpeed: 'default',
+				previewLinks: true,
 				backgroundTransition: 'fade',
+				parallaxBackground: '#000000',
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },

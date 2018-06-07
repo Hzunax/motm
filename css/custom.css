@@ -1,0 +1,14 @@
+.accentuate {
+    color: #a88d50;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.profile-container {
+    width: 40%;
+    border: white;
+    border-radius: 50%;
+}   
