@@ -77,30 +77,30 @@
 							</aside>
 					</section>
 				</section>
-				<section>
-					<h2>We've got freaking <span class="accentuate">live</span> editable code!</h2>
-					<pre><code data-trim contenteditable>
-						<style>
-							h2 {
-								text-decoration: none;
-							}
-						</style>
-					</code></pre>
-				</section>
 				<section data-background="https://media.giphy.com/media/AWfeFosX36RTW/giphy.gif">
 					<h2>Intermission</h2>
 				</section>
 				<section>
-					<section>
-						<h2 data-autoslide="1000">First vertical slide</h2>
-						<p data-autoslide="1000" class="fragment">First part </p>
-						<p data-autoslide="1000" class="fragment">of these </p>
-						<p class="fragment">fragments</p>
+					<h1>CSS conf</h1>
+				</section>
+				<section>
+					<section id="css-grid-slide" class="grid-container">
+						<h2>CSS live edit example</h2>
+						<div id="grid-target" class="grid-item">
+							<p>Is this readable?</p>
+						</div>
 					</section>
 					<section>
-						<h3>Second vertical slide</h3>
+						<h2>CSS grid</h2>
+					</section>
+					<section id="accessibility-slide">
+						<h2>Accessibility</h2>
 					</section>
 				</section>
+				<section>
+					<h1>JS conf</h1>
+				</section>
+				<!--
 				<section data-background="./images/Blockchain.png">
 				</section>
 				<section data-background="./images/Chalkboard.jpg">
@@ -109,6 +109,7 @@
 				</section>
 				<section data-background="./images/Hand.jpg">
 				</section>
+				-->
 				<section data-background="https://media.giphy.com/media/d3YHLb3N5bxxo7Ha/giphy.gif">
 					<h2>Thank you!</h2>
 				</section>
@@ -142,12 +143,25 @@
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					// Server side speaker notes
 					{ src: 'socket.io/socket.io.js', async: true },
-					{ src: 'plugin/notes-server/client.js', async: true }
+					{ src: 'plugin/notes-server/client.js', async: true },
+					// Realtime CSS editing
+					{ src: 'node_modules/reveal-css-snippet/css-snippet.js', callback: function() {
+						document.getElementById('css-grid-slide').appendChild(RevealCSSSnippet({
+							//Element I want it scoped to
+							el: document.getElementById('grid-target'),
+							//Default CSS I want automatically loaded in
+							cssValue: "background: #ff0;\r\ncolor: #fff;\r\nheight: 50px;"
+						}));
+					} }
 				]
 			});
 			Reveal.configure({
 				autoSlide: 0
 			})
+		</script>
+		<script>
+			let cssSnippet = document.getElementsByClassName('css-snippet');
+			cssSnippet.classList.add('grid-item');
 		</script>
 	</body>
 </html>

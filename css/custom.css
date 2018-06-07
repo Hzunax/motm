@@ -6,6 +6,13 @@
     display: flex;
     justify-content: space-around;
 }
+.grid-container {
+    display: grid;
+}
+
+.css-snippet {
+    width: 100%
+}
 
 .profile-container {
     width: 40%;
