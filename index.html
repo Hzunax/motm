@@ -81,20 +81,21 @@
 					<h2>Intermission</h2>
 				</section>
 				<section>
-					<h1>CSS conf</h1>
-				</section>
-				<section>
-					<section id="css-grid-slide" class="grid-container">
-						<h2>CSS live edit example</h2>
-						<div id="grid-target" class="grid-item">
-							<p>Is this readable?</p>
-						</div>
+					<section>
+						<h1>CSS conf</h1>
 					</section>
 					<section>
 						<h2>CSS grid</h2>
 					</section>
 					<section id="accessibility-slide">
 						<h2>Accessibility</h2>
+					</section>
+					<section id="css-grid-slide" class="grid-container">
+						<h2>Accessibility example</h2>
+						<div id="grid-target" class="grid-item">
+							<p>Is this readable?</p>
+						</div>
+						<button onclick="getAccessibility()">calculate contrast</button>
 					</section>
 				</section>
 				<section>
@@ -160,8 +161,35 @@
 			})
 		</script>
 		<script>
-			let cssSnippet = document.getElementsByClassName('css-snippet');
-			cssSnippet.classList.add('grid-item');
+			function getAccessibility() {
+				let e = document.getElementById('grid-target');
+				let css = document.defaultView.getComputedStyle(e, null);
+				let bg = css.getPropertyValue('background-color');
+				let rgbBg = bg.match(/\d+/g).map(Number);
+				let txt = css.getPropertyValue('color');
+				let rgbTxt = txt.match(/\d+/g).map(Number);
+				
+				let contrast = calculateContrast(rgbBg, rgbTxt);
+				console.log('contrast: ', contrast);
+			}
+			function luminance(r, g, b) {
+				var a = [r, g, b].map(function (v) {
+					v /= 255;
+					return v <= 0.03928
+						? v / 12.92
+						: Math.pow( (v + 0.055) / 1.055, 2.4 );
+				});
+				return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722;
+			}
+			function calculateContrast(bg, txt) {
+				lum1 = luminance(bg[0], bg[1], bg[2]);
+				lum2 = luminance(txt[0], txt[1], txt[2]);
+				if(lum1 > lum2) {
+					return (lum1 + 0.05)/(lum2 + 0.05);
+				}
+				return (lum2 + 0.05)/(lum1 + 0.05);
+				return (luminance(bg[0], bg[1], bg[2]) + 0.05) / (luminance(txt[0], txt[1], txt[2]) + 0.05);
+			}
 		</script>
 	</body>
 </html>
