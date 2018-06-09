@@ -22,16 +22,25 @@
     border-radius: 50%;
 }
 
+.info-container {
+    width: 30%;
+} 
+.info-container-2 {
+    width: 60%;
+}
 .info-slide {
     text-align: left;
 }
 .info-slide p{
     font-size: 28px;
-    line-height: 1.5rem;
+    line-height: 1.4rem;
 }
 .info-slide img{
-    width:400px;
-    height:400px;
+    width:240px;
+    height:240px;
     border-radius: 50%;
     border-style: none;
+}
+div.info-text {
+    padding-top: 40px;
 }
