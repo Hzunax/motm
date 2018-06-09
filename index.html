@@ -96,6 +96,7 @@
 							<p>Is this readable?</p>
 						</div>
 						<button onclick="getAccessibility()">calculate contrast</button>
+						<p>Contrast value: <span id="contrast-value"></span></p>
 					</section>
 				</section>
 				<section>
@@ -197,15 +198,16 @@
 			// TODO add the contrast value to the DOM.
 			// TODO add rounding to contrast value & check with online contrast calculator for correctness.
 			function getAccessibility() {
-				let e = document.getElementById('grid-target');
-				let css = document.defaultView.getComputedStyle(e, null);
+				let element = document.getElementById('grid-target');
+				let css = document.defaultView.getComputedStyle(element, null);
 				let bg = css.getPropertyValue('background-color');
 				let rgbBg = bg.match(/\d+/g).map(Number);
 				let txt = css.getPropertyValue('color');
 				let rgbTxt = txt.match(/\d+/g).map(Number);
 				
-				let contrast = calculateContrast(rgbBg, rgbTxt);
-				console.log('contrast: ', contrast);
+				let contrast = Math.round(calculateContrast(rgbBg, rgbTxt) * 100)/100;
+				let contrastElement = document.getElementById('contrast-value');
+				contrastElement.innerHTML = contrast.toString();
 			}
 			function luminance(r, g, b) {
 				var a = [r, g, b].map(function (v) {
@@ -223,7 +225,6 @@
 					return (lum1 + 0.05)/(lum2 + 0.05);
 				}
 				return (lum2 + 0.05)/(lum1 + 0.05);
-				return (luminance(bg[0], bg[1], bg[2]) + 0.05) / (luminance(txt[0], txt[1], txt[2]) + 0.05);
 			}
 		</script>
 	</body>
