@@ -1,7 +1,6 @@
 .accentuate {
     color: #a88d50;
 }
-
 .flex-container {
     display: flex;
     justify-content: space-around;
@@ -9,17 +8,16 @@
 .grid-container {
     display: grid;
 }
-
 .css-snippet {
     width: 100%
 }
-
 .profile-container {
     width: 40%;
 }   
 .profile-container img {
-    border: solid 1px transparent;
     border-radius: 50%;
+}
+#css-grid-speaker {
 }
 
 .info-container {
@@ -43,4 +41,9 @@
 }
 div.info-text {
     padding-top: 40px;
+}
+
+button {
+    color: #000000;
+    background-color: #e1e1e1;
 }
