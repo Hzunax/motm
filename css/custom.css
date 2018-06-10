@@ -11,15 +11,37 @@
 .css-snippet {
     width: 100%
 }
+.grid-item.w90 {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.grid-container.present button {
+    background-color: #a88d50;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 0 32px;
+    margin-top: 48px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 15px;
+    box-shadow: 0 3px #999;
+}
+.grid-container.present button:hover{
+    background-color: #a88e50ab;
+    box-shadow: 0 1px #999;
+}
+
 .profile-container {
     width: 40%;
 }   
 .profile-container img {
     border-radius: 50%;
 }
-#css-grid-speaker {
-}
-
 .info-container {
     width: 30%;
 } 
