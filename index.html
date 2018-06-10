@@ -95,14 +95,20 @@
 					<section>
 						<h2>CSS grid</h2>
 						<div class="profile-container">
-								<img id="css-grid-speaker" src="images/oliver-williams.jpg">
-							</div>
+							<img id="css-grid-speaker" src="images/oliver-williams.jpg">
+						</div>
 					</section>
 					<section id="accessibility-slide">
 						<h2>Accessible by Law!</h2>
-						<div class="profile-container">
-							<img src="images/Dag-Inge_Aas.jpg">
-							<p>@daginge</p>
+						<div class="flex-container">
+							<div class="profile-container">
+								<img src="images/Dag-Inge_Aas.jpg">
+								<p>@daginge</p>
+							</div>
+							<div class="profile-container">
+								<img src="images/Idaaa.jpg">
+								<p>@idaaa</p>
+							</div>
 						</div>
 					</section>
 					<section id="css-grid-slide" class="grid-container">
@@ -111,8 +117,8 @@
 							<div id="grid-target" class="grid-item w90">
 								<p>Is this readable?</p>
 							</div>
-							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getAccessibility()"><p>Calculate contrast</p></button>
-							<p>Contrast value: <span id="contrast-value"></span></p>
+							<button onclick="getAccessibility()"><p>Calculate contrast</p></button>
+							<p>Contrast ratio: <span id="contrast-value"></span></p>
 						</div>
 					</section>
 				</section>
@@ -207,7 +213,7 @@
 							//Element I want it scoped to
 							el: document.getElementById('grid-target'),
 							//Default CSS I want automatically loaded in
-							cssValue: "background: #a88d50;\r\ncolor: #aaa;"
+							cssValue: "background: #a88d50;\r\ncolor: #000;"
 						}));
 					} }
 				]
