@@ -115,6 +115,15 @@
 							CSS grid layout is a 2-dimensional system. However, they can also work well together!
 						</aside>
 					</section>
+					<section id="grid-example-slide">
+						<h2>Example</h2>
+						<div class="grid-container" id="grid-container-example">
+							<div id="grid-header" class="grid-example"><span>Header</span></div>
+							<div id="grid-sidebar" class="grid-example"><span>Sidebar</span></div>
+							<div id="grid-content" class="grid-example"><span>Content</span></div>
+							<div id="grid-footer" class="grid-example"><span>Footer</span></div>
+						</div>
+					</section>
 
 					<!-- Accessibility -->
 
@@ -253,7 +262,7 @@
 				progress: false,
 				history: true,
 				transition: 'slide',
-				transitionSpeed: 'default',
+				transitionSpeed: 'slow',
 				previewLinks: true,
 				backgroundTransition: 'fade',
 				parallaxBackground: '#000000',
@@ -277,6 +286,10 @@
 							//Default CSS I want automatically loaded in
 							cssValue: "background: #a88d50;\r\ncolor: #000;"
 						}));
+						document.getElementById('grid-example-slide').appendChild(RevealCSSSnippet({
+							el: document.getElementById('grid-container-example'),
+							cssValue: "display: grid;\r\ngrid-template: \r\n [row1-start] \"header header header\" 1fr [row1-end] \r\n [row2-start] \"sidebar content .\" 1fr [row2-end] \r\n [row3-start] \"sidebar content .\" 1fr [row3-end] \r\n [row4-start] \"footer footer footer\" 1fr [row4-end]\r\n / 1fr 2fr 1fr;"
+						}))
 					} }
 				]
 			});

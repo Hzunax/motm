@@ -13,8 +13,41 @@ body {
     display: flex;
     justify-content: space-around;
 }
-.grid-container {
+/*.grid-container {
     display: grid;
+    grid-template: 
+        [row1-start] "header header header" 1fr [row1-end]
+        [row1-start] "sidebar content ." 1fr [row1-end]
+        [row1-start] "sidebar content ." 1fr [row1-end]
+        [row1-start] "footer footer footer" 1fr [row1-end]
+        / 1fr 2fr 1fr;
+}*/
+.grid-example {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#grid-container-example {
+    margin: 0 auto;
+    width: 90%
+}
+#grid-header {
+    grid-area: header;
+    background-color: #1976D2;
+}
+#grid-sidebar {
+    grid-area: sidebar;
+    background-color: #FFEB3B;
+    color: #000000;
+}
+#grid-content {
+    grid-area: content;
+    background-color: #D32F2F;
+}
+#grid-footer {
+    grid-area: footer;
+    background-color: #388E3C;
 }
 .css-snippet {
     width: 100%
