@@ -38,11 +38,11 @@
 				<section>
 					<div class="flex-container">
 						<div class="profile-container">
-							<img data-src="./images/Steven_Buelens_Square.jpg">
+							<img class="plain" data-src="./images/Steven_Buelens_Square.jpg">
 							<p>Front-end developer @ ING</p>
 						</div>
 						<div class="profile-container">
-							<img data-src="./images/Stijn_Van_Asschodt_Square.jpg">
+							<img class="plain" data-src="./images/Stijn_Van_Asschodt_Square.jpg">
 							<p>Front-end developer @ ING</p>
 						</div>
 					</div>
@@ -58,7 +58,8 @@
 						From the 10 non-billable days in your Open Program, which trainings have you followed so far? Why?
 						---
 						Well, after discussing with our Talent Development Manager, we've decided to go to a conference instead of a training.
-						And today, we'll share what we've learned and experienced and why you might consider going to a conference yourself!
+						Being front-end developers, we decided to go to the CSS- and JS conference in Berlin, from the 1st until the 3rd of June.
+						And today, we'll share what we've learned and experienced and why you may want to consider going to a conference yourself!
 					</aside>
 				</section>
 				<section>
@@ -96,7 +97,7 @@
 					<section>
 						<h1>CSS conf</h1>
 						<aside class="notes">
-
+							The CSS conference was the first part of the 3-day conference and took place on friday the 1st of June.
 						</aside>
 					</section>
 
@@ -270,6 +271,8 @@
 						<h1>JS conf</h1>
 					</section>
 
+					<!-- Async under the hood -->
+
 					<section>
 						<h2>Async under the hood</h2>
 						<div class="profile-container" style="margin: 0 auto">
@@ -277,14 +280,25 @@
 							<p>@codebytere</p>
 						</div>
 					</section>
-
 					<section>
-						<h2>Time Travel Debugging</h2>
-						<div class="profile-container" style="margin: 0 auto">
-							<img data-src="images/Jason_Laster.jpeg">
-							@jasonlaster11
+						<h2>Run to completion</h2>
+						<div class="flex-column">
+							<div style="background-color: #a88d50;">
+								<p>Beginning</p>
+							</div>
+							<div>
+								<!-- TODO put some arrow here pointing down. -->
+							</div>
+							<div style="background-color: #a88d50;">
+								<p>End</p>	
+							</div>
 						</div>
+						<aside class="notes">
+							JavaScript is run to completion. It will always finish a task before starting another one, or until control is explicitly yielded.
+						</aside>
 					</section>
+
+					<!-- Aggressive Web Apps -->
 
 					<section>
 						<h2>Aggressive Web Apps</h2>
@@ -292,9 +306,99 @@
 							<img data-src="images/Phil_Nash.jpg">
 							<p>@philnash</p>
 						</div>
+						<aside class="notes">
+							The last talk we'll summarize for you is one by Phil Nash: Aggressive Web Apps.
+						</aside>
+					</section>
+					<section>
+						<h2>Push notifications in the web</h2>
+						<aside class="notes">
+							This one is about using push notifications on the web. Not how to code them, but rather how and when to use them.
+						</aside>
+					</section>
+					<!-- <section>
+						<h2>How does it work?</h2>
+						See Phil Nash's YouTube video for a short explanation and visualisation around 3:20.
+					</section> -->
+					<!-- <section>
+
+					</section> -->
+					<section>
+						<h2>Examples of good notifications</h2>
+						<aside class="notes">
+							Notifications in your browser can be a good thing. You don't always want to have to download a full native app just to use part
+							of their features.
+							Examples:
+								- Delivery service (pizza, package, ...)
+								- Event updates (festival, conference, ...) so you don't always have to check their social media for updates.
+								- Chat alerts (although some might find these annoying/unnecessary).
+						</aside>
+					</section>
+					<section>
+						<h2><span class="accentuate">Timely</span>, <span class="accentuate">Actionable</span> and <span class="accentuate">Personal</span></h2>
+						<aside class="notes">
+							According to Phil, good push notifications have to be Timely, Actionable and Personal.
+						</aside>
+					</section>
+					<section>
+						<h2>Timely</h2>
+						<p class="fragment"><span class="accentuate">Time</span> of day</p>
+						<p class="fragment">Time <span class="accentuate">zone</span></p>
+						<p class="fragment"><span class="accentuate">Number</span> of notifications</p>
+						<aside class="notes">
+							Consider the time of day (person might be asleep?), the time zone they're in and also the number of notifications you're sending that person as well.
+						</aside>
+					</section>
+					<section>
+						<h2>Actionable</h2>
+						<aside class="notes">
+							The notification shouldn't just be a message. If I receive a notification that I can check in for my flight now, I want to be able to click the 
+							notification and go to the check in procedure.
+						</aside>
+					</section>
+					<section>
+						<h2>Personal</h2>
+						<p class="fragment">Bob sent <span class="accentuate">you</span> a message</p>
+						<p class="fragment"><span class="accentuate">You</span> can check in to your flight now</p>
+						<p class="fragment"><span class="accentuate">Your</span> pizza has arrived</p>
+						<aside class="notes">
+							It's important that the notification is actually about YOU.
+						</aside>
+					</section>
+					<section>
+						<h2>Where do things go <span class="accentuate">Wrong</span>?</h2>
+						<img class="fragment plain" data-src="images/Allow_Notifications_Popup.png">
+						<aside class="notes">
+							Many of you may recognize a pop up like this. It's the first time you're accessing this website (see url), and without context,
+							they want to send you push notifications. 
+						</aside>
+					</section>
+					<section>
+						<h2>Phil's summary</h2>
+						<aside class="notes">
+							At the end of his talk, Phil summarizes the most important things to keep in mind when using push notifications.
+						</aside>
+					</section>
+					<section>
+						<h2><span class="accentuate">Don't</span> ask notification permissions <span class="accentuate">on page load</span></h2>
+					</section>
+					<section>
+						<h2>Allow users to <span class="accentuate">opt out</span></h2>
+						<aside class="notes">
+							You don't HAVE to make the notifications timely, actionable and personal. But if you don't, make sure the user can opt out from
+							WITHIN your application, so they don't turn it off for all web apps!
+						</aside>
+					</section>
+					<section>
+						<h2>If users block <span class="accentuate">all notifications</span>, the whole web suffers</h2>
+						<aside class="notes">
+							Because if too many websites keep request permissions to send notifications without context, a user is just one click away of 
+							blocking ALL notifications.
+						</aside>
 					</section>
 				</section>
 
+<<<<<<< HEAD
 				<section>
 
 					<!-- Why Confs -->
@@ -400,6 +504,9 @@
 						</section>
 					</section>
 
+=======
+				<!-- Take aways -->
+>>>>>>> e2f9e451c4278683a64b7c5e1386d6e6d11ba6dc
 
 				<section>
 					<!-- Conclusion -->
@@ -426,7 +533,7 @@
 				<section>
 					<div class="flex-container info-slide">
 						<div class="info-container">
-							<img data-src="./images/StijvenBueschodt.png">
+							<img class="plain" data-src="./images/StijvenBueschodt.png">
 						</div>
 						<div class="info-container-2">
 							<div class="info-text">
