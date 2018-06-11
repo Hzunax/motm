@@ -117,3 +117,29 @@ button {
     color: #000000;
     background-color: #e1e1e1;
 }
+
+.letter-I h2,
+.letter-T h2 {
+    font-size: 100px;
+    -webkit-transition: font-size 2s;
+    -moz-transition: font-size 2s;
+    -o-transition: font-size 2s;
+    transition: font-size 2s;
+}
+
+.letter-I h2:hover,
+.letter-T h2:hover {
+    font-size: 300px;
+}
+
+.hiddenHoverBox {
+    position: fixed;
+    bottom: -50px;
+    right: -25px;
+    width: 100px;
+    height: 100px;
+}
+
+.hiddenHoverBox:hover ~ .letter-T h2{
+    background: blue;
+}
