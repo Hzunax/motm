@@ -290,14 +290,14 @@
 								<!-- TODO put some arrow here pointing down. -->
 							</div>
 							<div style="background-color: #a88d50;">
-								<p>End</p>
+								<p>End</p>	
 							</div>
 						</div>
 						<aside class="notes">
 							JavaScript is run to completion. It will always finish a task before starting another one, or until control is explicitly yielded.
 						</aside>
 					</section>
-					
+
 					<!-- Aggressive Web Apps -->
 
 					<section>
@@ -306,17 +306,23 @@
 							<img data-src="images/Phil_Nash.jpg">
 							<p>@philnash</p>
 						</div>
+						<aside class="notes">
+							The last talk we'll summarize for you is one by Phil Nash: Aggressive Web Apps.
+						</aside>
 					</section>
 					<section>
 						<h2>Push notifications in the web</h2>
+						<aside class="notes">
+							This one is about using push notifications on the web. Not how to code them, but rather how and when to use them.
+						</aside>
 					</section>
-					<section>
+					<!-- <section>
 						<h2>How does it work?</h2>
-						<!-- See Phil Nash's YouTube video for a short explanation and visualisation around 3:20. -->
-					</section>
-					<section>
-						
-					</section>
+						See Phil Nash's YouTube video for a short explanation and visualisation around 3:20.
+					</section> -->
+					<!-- <section>
+
+					</section> -->
 					<section>
 						<h2>Examples of good notifications</h2>
 						<aside class="notes">
@@ -352,7 +358,7 @@
 					</section>
 					<section>
 						<h2>Personal</h2>
-						<p class="fragment">Jos sent <span class="accentuate">you</span> a message</p>
+						<p class="fragment">Bob sent <span class="accentuate">you</span> a message</p>
 						<p class="fragment"><span class="accentuate">You</span> can check in to your flight now</p>
 						<p class="fragment"><span class="accentuate">Your</span> pizza has arrived</p>
 						<aside class="notes">
@@ -360,10 +366,40 @@
 						</aside>
 					</section>
 					<section>
-						<h2>Allow peoplo to <span class="accentuate">opt out</span> from within your PWA</h2>
+						<h2>Where do things go <span class="accentuate">Wrong</span>?</h2>
+						<img class="fragment plain" data-src="images/Allow_Notifications_Popup.png">
+						<aside class="notes">
+							Many of you may recognize a pop up like this. It's the first time you're accessing this website (see url), and without context,
+							they want to send you push notifications. 
+						</aside>
 					</section>
-
+					<section>
+						<h2>Phil's summary</h2>
+						<aside class="notes">
+							At the end of his talk, Phil summarizes the most important things to keep in mind when using push notifications.
+						</aside>
+					</section>
+					<section>
+						<h2><span class="accentuate">Don't</span> ask notification permissions <span class="accentuate">on page load</span></h2>
+					</section>
+					<section>
+						<h2>Allow users to <span class="accentuate">opt out</span></h2>
+						<aside class="notes">
+							You don't HAVE to make the notifications timely, actionable and personal. But if you don't, make sure the user can opt out from
+							WITHIN your application, so they don't turn it off for all web apps!
+						</aside>
+					</section>
+					<section>
+						<h2>If users block <span class="accentuate">all notifications</span>, the whole web suffers</h2>
+						<aside class="notes">
+							Because if too many websites keep request permissions to send notifications without context, a user is just one click away of 
+							blocking ALL notifications.
+						</aside>
+					</section>
 				</section>
+
+				<!-- Take aways -->
+
 				<section>
 					<section>
 						<h2 data-autoslide="1000">Take-aways</h2>
