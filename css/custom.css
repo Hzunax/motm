@@ -49,6 +49,10 @@ body {
     grid-area: footer;
     background-color: #388E3C;
 }
+#grid-iframe {
+    height: 450px;
+    width: 100%;
+}
 .css-snippet {
     width: 100%
 }
