@@ -305,7 +305,66 @@
 							</div>
 						</div>
 						<aside class="notes">
-							JavaScript is run to completion. It will always finish a task before starting another one, or until control is explicitly yielded.
+							JavaScript is run to completion. It will always finish a task before starting another one, or until control is explicitly 
+							yielded.
+						</aside>
+					</section>
+					<section>
+						<h2>Promises</h2>
+						<pre><code data-noescape data-trim>
+							const prom = Promise.resolve('hello');
+
+							prom.then((val) => {
+							  console.log(val);
+							  return `${val} world!`
+							}).then((val) => {
+							  console.log(val);
+							})
+						</code></pre>
+						<aside class="notes">
+							
+						</aside>
+					</section>
+					<section>
+						<h2>Async/Await</h2>
+						<pre><code data-noescape data-trim>
+							async function getAddress() {
+							  const streetAddress = await getStreetAddress();
+							  const city = await getCity();
+							  const postal = await getPostalCode();
+
+							  return `${streetAddress}, ${postal} ${city}`;
+							}
+						</code></pre>
+						<p class="fragment">Awaits execute <span class="accentuate">synchronously</span>??</p>
+						<aside class="notes">
+							In async functions, await will let you wait for the result of a function before passing it to the variable.
+							BUT: These awaits will execute synchronously. Meaning that the second await will only execute after the first await has
+							been fulfilled or rejected.
+							This can be the desired behavior in some cases, where the request will depend on the result of a previous one. But what if
+							they're independent?
+						</aside>
+					</section>
+					<section>
+						<h2>Await <span class="accentuate">+</span> Promises!</h2>
+						<pre><code data-noescape data-trim>
+							async function getAddress() {
+							  let [
+								streetAddress,
+								city,
+								postal
+							  ] = await Promise.all([
+								getStreetAddress(),
+								getCity(),
+								getPostalCode()
+							  ]);
+
+							  return `${streetAddress}, ${postal} ${city}`;
+							}
+						</code></pre>
+						<aside class="notes">
+							In that case, we can use Promises and awaits together! By awaiting the result of Promise.all(), all the functions specified, can 
+							be run at the same time!
 						</aside>
 					</section>
 
