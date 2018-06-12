@@ -379,13 +379,13 @@
 						<pre><code data-noescape data-trim>
 							async function getAddress() {
 							  let [
-								streetAddress,
-								city,
-								postal
+							    streetAddress,
+							    city,
+							    postal
 							  ] = await Promise.all([
-								getStreetAddress(),
-								getCity(),
-								getPostalCode()
+							    getStreetAddress(),
+							    getCity(),
+							    getPostalCode()
 							  ]);
 
 							  return `${streetAddress}, ${postal} ${city}`;
@@ -398,8 +398,7 @@
 							</p>
 						</aside>
 					</section>
-					<section>
-						TODO add some gif "It's beautiful" or similar.
+					<section data-background="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif">
 					</section>
 
 					<!-- Aggressive Web Apps -->
@@ -475,8 +474,8 @@
 					</section>
 					<section>
 						<h2>Personal</h2>
-						<p class="fragment">Bob sent <span class="accentuate">you</span> a message</p>
-						<p class="fragment"><span class="accentuate">You</span> can check in to your flight now</p>
+						<p class="fragment">Alice sent <span class="accentuate">you</span> a message</p>
+						<p class="fragment"><span class="accentuate">You</span> can check in to <span class="accentuate">your</span> flight now</p>
 						<p class="fragment"><span class="accentuate">Your</span> pizza has arrived</p>
 						<aside class="notes">
 							<p class="steven">
@@ -490,7 +489,9 @@
 						<aside class="notes">
 							<p class="steven">
 							Many of you may recognize a pop up like this. It's the first time you're accessing this website (see url), and without context,
-							they want to send you push notifications. 
+							they want to send you push notifications. Obviously, a user can just block the 
+							notifications, but the user can also go to their browser settings and block ALL
+							notifications!
 							</p>
 						</aside>
 					</section>
@@ -511,6 +512,8 @@
 							<p class="steven">
 							You don't HAVE to make the notifications timely, actionable and personal. But if you don't, make sure the user can opt out from
 							WITHIN your application, so they don't turn it off for all web apps!
+							And that's when the whole web suffers. Because this way, a user is blocking himself
+							from receiving any useful push notifications.
 							</p>
 						</aside>
 					</section>
