@@ -204,6 +204,8 @@
 							</div>
 						</div>
 						<aside class="notes">
+							Ok, enough technical talk for now. The common thread between a lot of talks at both the CSS and JS conf was 'ethical programming',
+							inclusion and exclusion. So that's where this next talk comes in to play:
 							Accessible by law! Generating Colors with JS and CSS Custom Properties, by Dag-Inge Aas and Ida Aalen.
 							They are both Norwegian and working at Confrere.
 						</aside>
@@ -212,7 +214,8 @@
 					<section data-background="https://media.giphy.com/media/KF8NczgtuSy9W/giphy.gif">
 						<h2 style="color:#e1e1e1">Accessibility?</h2>
 						<aside class="notes">
-							Web accessibility basicly means that people with disabilities should be able to interact with or access your website.
+							Web accessibility basicly means that people with disabilities should be able to interact with or access your website. For this, 
+							a set of guidelines has been defined: The Web Content Accessibility Guidelines.
 						</aside>
 					</section>
 					<section data-background="https://media.giphy.com/media/Vk7VKS50xcSC4/giphy.gif">
@@ -269,6 +272,9 @@
 
 					<section>
 						<h1>JS conf</h1>
+						<aside class="notes">
+							Moving on to the second conference: The JS conf. Contrary to CSS conf, this one lasted 2 days and was held in the weekend.
+						</aside>
 					</section>
 
 					<!-- Async under the hood -->
@@ -279,18 +285,21 @@
 							<img data-src="images/Shelley_Vohr.jpg">
 							<p>@codebytere</p>
 						</div>
+						<aside class="notes">
+							The first talk is one from Shelley Vohr, who is a developer at GitHub and talked about Asynchrony in JavaScript.
+						</aside>
 					</section>
 					<section>
 						<h2>Run to completion</h2>
-						<div class="flex-column">
+						<div class="flex-column" style="margin: 0 auto;">
 							<div style="background-color: #a88d50;">
-								<p>Beginning</p>
+								<p style="color: black">Beginning</p>
 							</div>
 							<div>
-								<!-- TODO put some arrow here pointing down. -->
+								<img class="plain" data-src="images/Arrow_down.png" alt="Arrow pointing down" style="background-color: transparent">
 							</div>
 							<div style="background-color: #a88d50;">
-								<p>End</p>	
+								<p style="color: black">End</p>	
 							</div>
 						</div>
 						<aside class="notes">
@@ -307,11 +316,12 @@
 							<p>@philnash</p>
 						</div>
 						<aside class="notes">
-							The last talk we'll summarize for you is one by Phil Nash: Aggressive Web Apps.
+							After the technical talk, it's again time for some ethics. The last talk we'll summarize for you is one by Phil Nash: 
+							Aggressive Web Apps.
 						</aside>
 					</section>
 					<section>
-						<h2>Push notifications in the web</h2>
+						<h2>Push notifications in the <span class="accentuate">web</span></h2>
 						<aside class="notes">
 							This one is about using push notifications on the web. Not how to code them, but rather how and when to use them.
 						</aside>
@@ -324,10 +334,10 @@
 
 					</section> -->
 					<section>
-						<h2>Examples of good notifications</h2>
+						<h2>Examples of <span class="accentuate">good</span> notifications</h2>
 						<aside class="notes">
-							Notifications in your browser can be a good thing. You don't always want to have to download a full native app just to use part
-							of their features.
+							Although sometimes (or mostly) seen as annoying, notifications in your browser can actually be a good thing! 
+							You don't always want to have to download a full native app just to use partof their features.
 							Examples:
 								- Delivery service (pizza, package, ...)
 								- Event updates (festival, conference, ...) so you don't always have to check their social media for updates.
@@ -337,7 +347,7 @@
 					<section>
 						<h2><span class="accentuate">Timely</span>, <span class="accentuate">Actionable</span> and <span class="accentuate">Personal</span></h2>
 						<aside class="notes">
-							According to Phil, good push notifications have to be Timely, Actionable and Personal.
+							Phil defines good push notifications as Timely, Actionable and Personal.
 						</aside>
 					</section>
 					<section>
@@ -392,7 +402,7 @@
 					<section>
 						<h2>If users block <span class="accentuate">all notifications</span>, the whole web suffers</h2>
 						<aside class="notes">
-							Because if too many websites keep request permissions to send notifications without context, a user is just one click away of 
+							Because if too many websites keep requesting permission to send notifications without context, a user is just one click away of 
 							blocking ALL notifications.
 						</aside>
 					</section>
@@ -583,7 +593,7 @@
 							//Element I want it scoped to
 							el: document.getElementById('grid-target'),
 							//Default CSS I want automatically loaded in
-							cssValue: "background: #a88d50;\r\ncolor: #000;"
+							cssValue: "background: #a88d50;\r\ncolor: #000000;"
 						}));
 						document.getElementById('grid-example-slide').appendChild(RevealCSSSnippet({
 							el: document.getElementById('grid-container-example'),
