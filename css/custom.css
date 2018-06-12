@@ -138,15 +138,16 @@ button {
     font-size: 300px;
 }
 
-.hiddenHoverBox {
-    position: fixed;
-    top: 85%;
-    left: 115%;
-    width: 100px;
-    height: 100px;
-    background: blue;
+.letter-IT h2 {
+    font-size: 100px;
+    -webkit-transition: font-size 2s;
+    -moz-transition: font-size 2s;
+    -o-transition: font-size 2s;
+    transition: font-size 2s;
 }
 
-.hiddenHoverBox:hover ~ .letter-T h2{
-    background: green;
+.letter-IT h2:hover {
+    font-size: 300px;
 }
+
+
