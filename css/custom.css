@@ -139,14 +139,14 @@ button {
 }
 
 .hiddenHoverBox {
-    position: absolute;
-    top: 100%;
-    right: 0;
+    position: fixed;
+    top: 85%;
+    left: 115%;
     width: 100px;
     height: 100px;
     background: blue;
 }
 
 .hiddenHoverBox:hover ~ .letter-T h2{
-    background: blue;
+    background: green;
 }
