@@ -58,7 +58,7 @@
 						<p class="stijn">From the 10 non-billable days in your Open Program, which trainings have you followed so far? Why?</p>
 						---
 						<p class="steven">Well, after discussing with our Talent Development Manager, we've decided to go to a conference instead of a training.
-						Being front-end developers, we decided to go to the CSS- and JS conference in Berlin, from the 1st until the 3rd of June.
+						Being front-end developers, we booked a ticket to go to the CSS- and JS conference in Berlin, from the 1st until the 3rd of June.
 						And today, we'll share what we've learned and experienced and why you may want to consider going to a conference yourself!</p>
 					</aside>
 				</section>
@@ -131,13 +131,18 @@
 						</aside>
 					</section>
 					<section id="grid-example-slide">
-						<h2>Example</h2>
+						<h2>Example of Grid</h2>
 						<div class="grid-container" id="grid-container-example">
 							<div id="grid-header" class="grid-example"><span>Header</span></div>
 							<div id="grid-sidebar" class="grid-example"><span>Sidebar</span></div>
 							<div id="grid-content" class="grid-example"><span>Content</span></div>
 							<div id="grid-footer" class="grid-example"><span>Footer</span></div>
 						</div>
+						<aside class="notes">
+							<p class="steven">
+								Grid-template = grid-template-row & grid-template-column & grid-area
+							</p>
+						</aside>
 					</section>
 					<section>
 						<h2>Browser support?</h2>
@@ -160,17 +165,15 @@
 						<h2>CSS @supports rule</h2>
 						<div class="flex-container">
 							<pre><code data-trim data-noescape>
-								@supports (display: grid) {
-								  div {
-								    display: grid;
-								  }
-								}
-							</code></pre>
-							<div></div>
-							<pre><code data-trim data-noescape>
-								div {
-								  display: flex;
-								}
+							div {
+							  display: flex;
+							}
+
+							@supports (display: grid) {
+							  div {
+							    display: grid;
+							  }
+							}
 							</code></pre>
 						</div>
 						<aside class="notes">
@@ -187,11 +190,25 @@
 						</aside>
 					</section>
 					<section>
-						TODO add slide
+						<pre><code data-trim data-noescape>
+							div {
+							  display: flex;
+							}
+							<mark style="background-color: grey;">
+							@supports (display: grid) {
+							  div {
+								display: grid;
+							  }
+							}</mark>
+
+							
+						</code></pre>
 						<aside class="notes">
+							<p class="steven">
 							Well luckily, if the browser doesn't recognize the @supports rule, it will not even try to interpret it at all. It will simply
 							discard the entire rule and move on to the next. Since you have defined some fallback content, it will take that as the
 							styling.
+							</p>
 						</aside>
 					</section>
 
@@ -241,7 +258,7 @@
 					<section>
 						<h2>Contrast ratio?</h2>
 						<p class="fragment">Relative luminance: 0 -> 1</p>
-						<img class="fragment plain" data-src="images/ContrastRatio.png" style="background-color: #313131">
+						<img class="fragment plain" data-src="images/ContrastRatio.png" style="background-color: transparent">
 						<aside class="notes">
 							<p class="stijn">
 							How is this ratio calculated?
@@ -636,7 +653,7 @@
 								</p>
 							</aside>
 						</section>
-						<section>
+						<section data-transition="none">
 							<div class="letter-IT"><h2>I T</h2></div>
 							<aside class="notes">
 								<p class="steven">
