@@ -116,7 +116,8 @@
 							<img id="css-grid-speaker" data-src="images/oliver-williams.jpg">
 						</div>
 						<aside class="notes">
-							<p class="steven">Refactoring with CSS Grid, by Oliver Williams.</p>
+							<p class="steven">
+								The first thing we want to talk about is Refactoring with CSS Grid, a presentation given by Oliver Williams.</p>
 						</aside>
 					</section>
 					<section>
@@ -140,7 +141,11 @@
 						</div>
 						<aside class="notes">
 							<p class="steven">
-								Grid-template = grid-template-row & grid-template-column & grid-area
+								What we have here is an example of a CSS grid. The css proporties to make this are
+								grid-template-row, grid-template-column & grid-area. But, you can also use a grid-template to make it al in once.
+								* row1-start = grid-template-row
+								* 1fr 2fr 1fr = grid-template-colum (can also be pixels, percentage)
+								* text and dots = grid-area	
 							</p>
 						</aside>
 					</section>
@@ -453,12 +458,14 @@
 						<aside class="notes">
 							<p class="steven">
 							Although sometimes (or mostly) seen as annoying, notifications in your browser can actually be a good thing! 
-							You don't always want to have to download a full native app just to use partof their features.
+							You don't always want to download a full native app just to use partof their features.
 							Examples:
 								- Delivery service (pizza, package, ...)
 								- Event updates (festival, conference, ...) so you don't always have to check their social media for updates.
 								- Chat alerts (although some might find these annoying/unnecessary).
-							And it is okay that you don't want to receive it, but some people really like this kind of notifications.
+							And it is okay that you don't want to receive it, but some people really like this kind of notifications if they are useful.
+
+							But when is a notification useful and not making the user annoyed by it?
 							</p>
 						</aside>
 					</section>
@@ -466,7 +473,6 @@
 						<h2><span class="accentuate">Timely</span>, <span class="accentuate">Actionable</span> and <span class="accentuate">Personal</span></h2>
 						<aside class="notes">
 							<p class="steven">
-								But when is a notification useful and not making the user anooyed by it?
 								Phil defines good push notifications as Timely, Actionable and Personal.
 							</p>
 						</aside>
@@ -510,7 +516,7 @@
 							Many of you may recognize a pop up like this. It's the first time you're accessing this website (see url), and without context,
 							they want to send you push notifications. Obviously, a user can just block the 
 							notifications, but the user can also go to their browser settings and block ALL
-							notifications!
+							notifications! And that is not what we want, because some notifications are useful.
 							</p>
 						</aside>
 					</section>
@@ -524,6 +530,14 @@
 					</section>
 					<section>
 						<h2><span class="accentuate">Don't</span> ask notification permissions <span class="accentuate">on page load</span></h2>
+						<aside class="notes">
+							<p class="steven">
+							You don't HAVE to make the notifications timely, actionable and personal. But if you don't, make sure the user can opt out from
+							WITHIN your application, so they don't turn it off for all web apps!
+							And that's when the whole web suffers. Because this way, a user is blocking himself
+							from receiving any useful push notifications.
+							</p>
+						</aside>
 					</section>
 					<section>
 						<h2>Allow users to <span class="accentuate">opt out</span></h2>
